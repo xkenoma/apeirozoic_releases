@@ -1,0 +1,151 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "Combiner",
+"language": "GDScript",
+"path": "res://core/Combiner.gd"
+}, {
+"base": "Node2D",
+"class": "CombinerEngine",
+"language": "GDScript",
+"path": "res://game/CombinerEngine.gd"
+}, {
+"base": "Node",
+"class": "Database",
+"language": "GDScript",
+"path": "res://core/Database.gd"
+}, {
+"base": "Node",
+"class": "Helper",
+"language": "GDScript",
+"path": "res://core/Helper.gd"
+}, {
+"base": "Node",
+"class": "NameCreator",
+"language": "GDScript",
+"path": "res://core/NameCreator.gd"
+}, {
+"base": "Reference",
+"class": "Stats",
+"language": "GDScript",
+"path": "res://core/Stats.gd"
+} ]
+_global_script_class_icons={
+"Combiner": "",
+"CombinerEngine": "",
+"Database": "",
+"Helper": "",
+"NameCreator": "",
+"Stats": ""
+}
+
+[application]
+
+config/name="Apeirozoic"
+run/main_scene="res://Main.tscn"
+boot_splash/image="res://splashscreen_v1.png"
+boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
+config/icon="res://iconv4.png"
+
+[autoload]
+
+Screenshot="*res://core/Screenshot.gd"
+Globals="*res://core/Globals.gd"
+
+[debug]
+
+gdscript/warnings/enable=false
+gdscript/warnings/unassigned_variable=false
+gdscript/warnings/unassigned_variable_op_assign=false
+gdscript/warnings/unused_variable=false
+gdscript/warnings/shadowed_variable=false
+gdscript/warnings/unreachable_code=false
+gdscript/warnings/standalone_expression=false
+gdscript/warnings/void_assignment=false
+gdscript/warnings/narrowing_conversion=false
+gdscript/warnings/function_may_yield=false
+gdscript/warnings/variable_conflicts_function=false
+gdscript/warnings/function_conflicts_variable=false
+gdscript/warnings/function_conflicts_constant=false
+gdscript/warnings/incompatible_ternary=false
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+gdscript/warnings/property_used_as_function=false
+gdscript/warnings/constant_used_as_function=false
+gdscript/warnings/function_used_as_property=false
+gdscript/warnings/integer_division=false
+
+[display]
+
+window/size/width=720
+window/size/height=1280
+window/size/test_width=576
+window/size/test_height=640
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "mixing-desk" )
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[input]
+
+return={
+"deadzone": 0.5,
+"events": [  ]
+}
+screenshot={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
+ ]
+}
+refresh={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777248,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/2d/use_pixel_snap=true
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
